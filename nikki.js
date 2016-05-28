@@ -900,7 +900,7 @@ function renderRanking(cate, ranking) {
     } else if (ranking == 0 || c.totalScore == clothesRanking[cate][0].totalScore)  {
       cls = "class='red'";
     }
-    var ret = "<span " + cls + ">" + c.name + "(" + c.source.rawSource + c.totalScore + ")" + "</span>";
+    var ret = "<span " + cls + ">" + c.name + "[" + c.source.rawSource + c.totalScore + "]" + "</span>";
     if (ranking > 0) {
       if (clothesRanking[cate][ranking].totalScore < clothesRanking[cate][ranking-1].totalScore) {
         ret = "<span>&gt;<span>" + ret;
