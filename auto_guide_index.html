@@ -15,6 +15,7 @@
     <script type='text/javascript' charset="UTF-8" src='../nikkistats/skills.js'></script>
     <script type='text/javascript' charset="UTF-8" src='../nikkistats/npc.js'></script>
     <script type='text/javascript' charset="UTF-8" src='nikki.js'></script>
+    <script type='text/javascript' charset="UTF-8" src='guide.js'></script>
     <link rel="stylesheet" href="jquery.auto-complete.css">
     <style>
       table
@@ -318,7 +319,7 @@
   <body>
     <div class='announcement'>
       Nikki's wardrobe. <br/>
-      Update 20160608:<br/>
+      Update 20160811:<br/>
     </div>
     <hr/>
     <div id='filtersTop'>
@@ -326,7 +327,7 @@
         <div class='control'>
           <input type="radio" name="mode" value="filtering" onClick="changeMode(true)" /> 筛选
           <input type="radio" name="mode" value="ranking" onClick="changeMode(false)" checked/> 计分
-          <select id="theme" onChange="changeTheme()" style="display: none"></select>
+          <select id="theme" onChange="changeTheme();createGuide()" style="display: none"></select>
           <input class="nice" type="radio" name="boost" id="boostStandard" value="standard" onClick="changeBoost(1)" checked/>
           <label for="boostStandard">标准</label>
           <input class="nice" type="radio" name="boost" id="boostExtreme" value="boostExtreme" onClick="changeBoost(2)" />
@@ -425,6 +426,8 @@
       </form>
     </div>
     <div id="skills">
+    </div>
+    <div id='guide'>
     </div>
     <hr>
     <div id="summary" class="panel">
