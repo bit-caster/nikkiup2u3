@@ -868,12 +868,57 @@ function refreshRanking() {
         cateName = cate.split('-')[1];
       }
       var tr = $("<tr>");
-      tr.append("<td class='category'>【" + cateName + "】</td>");
+      if("萤光之灵"==cateName){
+        cateName="萤光";
+      }
+      if("连衣裙"==cateName){
+        cateName="裙子";
+      }
+      if("袜子-袜子"==cateName){
+        cateName="袜子";
+      }
+      if("袜子-袜套"==cateName){
+        cateName="袜套";
+      }
+      if("颈饰·项链"==cateName){
+        cateName="项链";
+      }
+      if("颈饰·围巾"==cateName){
+        cateName="围巾";
+      }
+      if("手饰·左"==cateName){
+        cateName="手饰1";
+      }
+      if("手饰·右"==cateName){
+        cateName="手饰2";
+      }
+      if("手饰·双"==cateName){
+        cateName="手饰3";
+      }
+      if("手持·左"==cateName){
+        cateName="手持1";
+      }
+      if("手持·右"==cateName){
+        cateName="手持2";
+      }
+      cateName = cateName.replace("特殊·","");
+      tr.append("<td class='category'>" + cateName + "：</td>");
       var ranking = $("<td>");
-      for (var i = 0; i < 5; i++) {
+      // for (var i = 0; i < 5; i++) {
+      //   var x = renderRanking(cate, i);
+      //   if (x) {
+      //     ranking.append(x);
+      //   } else {
+      //     break;
+      //   }
+      // }
+       for (var i = 0; i < 4; i++) {
         var x = renderRanking(cate, i);
         if (x) {
           ranking.append(x);
+          if(i%2){
+            ranking.append("</br>");
+          }
         } else {
           break;
         }
