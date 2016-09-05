@@ -530,6 +530,7 @@ function addBonusInfo(base, weight, tag) {
   '7-支5': [addBonusInfo('S', 0.25, "运动系"), addBonusInfo('S', 0.25, "海军风")],
   '8-1': [addBonusInfo('A', 0.5, "小动物")],
   '8-2': [addBonusInfo('S', 0.5, "摇滚风")],
+  '8-2公': [addBonusInfo('S', 0.5, "摇滚风")],
   '8-3': [addBonusInfo('A', 0.5, "中式古典")],
   '8-4': [addBonusInfo('A', 0.5, "中性风")],
   '8-5': [addBonusInfo('B', 1, "中式古典")],
