@@ -969,7 +969,7 @@ function moreLink(cate) {
       if (x) {
         x.insertBefore($(this));
         if(i%2){
-            "</br>".insertBefore($(this));
+            $("</br>").insertBefore($(this));
           }
       } else {
         break;
