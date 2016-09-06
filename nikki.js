@@ -961,19 +961,22 @@ function renderRanking(cate, ranking) {
 
 function moreLink(cate) {
   var link = $("<span class='more'>&nbsp;| More...</a>");
-  link.attr("num", 5);
+  link.attr("num", 4);//link.attr("num", 5);  
   link.click(function() {
     var num = parseInt($(this).attr("num"));
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 4; i++) {//for (var i = 0; i < 5; i++) {
       var x = renderRanking(cate, num+i);
       if (x) {
         x.insertBefore($(this));
+        if(i%2){
+            "</br>".insertBefore($(this));
+          }
       } else {
         break;
       }
     }
-    if (clothesRanking[cate].length > num + 5) {
-      link.attr("num", num + 5);
+    if (clothesRanking[cate].length > num + 4) {//if (clothesRanking[cate].length > num + 5) {
+      link.attr("num", num + 4);//link.attr("num", num + 5);
     } else {
       $(this).remove();
     }
