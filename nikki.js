@@ -923,7 +923,7 @@ function refreshRanking() {
           break;
         }
       }
-      if (clothesRanking[cate].length > 5) {
+      if (clothesRanking[cate].length > 4) {
         ranking.append(moreLink(cate));
       }
       tr.append(ranking);
